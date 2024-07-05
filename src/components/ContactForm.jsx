@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com"; // Using emailjs-com for sending emails
+// import emailjs from "emailjs-com"; // Using emailjs-com for sending emails
+import emailjs from '@emailjs/browser';
+
 import "./contactFormStyles.css"; // Import the CSS file for styles
 
 const ContactForm = () => {
@@ -9,12 +11,9 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_your_service_id",
-        "template_your_template_id",
-        form.current,
-        "user_your_user_id"
-      )
+    .sendForm(import.meta.env.VITE_YOUR_SERVICE_ID, import.meta.env.VITE_YOUR_TEMPLATE_ID, form.current, {
+      publicKey: import.meta.env.VITE_YOUR_PUBLIC_KEY,
+    })
       .then(
         (result) => {
           console.log(result.text);
