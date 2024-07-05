@@ -1,0 +1,26 @@
+.icon_grid {
+  font-size: var(--font-size-300);
+
+  display: flex;
+  gap: 1rem;
+
+  position: absolute;
+
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.icon_link {
+  border: 2px solid var(--primary-white);
+  border-radius: 50%;
+  padding: 1rem;
+
+  /* Smooth transition effect */
+  transition: all 0.3s ease-in-out;
+}
+
+.icon_link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

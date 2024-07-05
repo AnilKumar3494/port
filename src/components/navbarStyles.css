@@ -1,0 +1,39 @@
+.nav_bar {
+  color: var(--text-gray);
+  font-size: var(--font-size-150);
+  font-weight: bold;
+  border: 2px solid var(--primary-white);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  min-width: 80%;
+  margin: 0 auto;
+
+  position: fixed;
+  z-index: 100;
+
+  backdrop-filter: blur(10px);
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav_bar .nav_link {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-right: 1px solid var(--primary-white);
+  text-align: center;
+
+  /* Ensure the transition is consistent */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav_bar .nav_link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav_bar .nav_link.active {
+  background: rgba(255, 255, 255, 0.2);
+}
