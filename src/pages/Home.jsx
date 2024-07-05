@@ -1,9 +1,12 @@
 import React from "react";
+import NavBar from "../components/NavBar";
 // import "./homeStyles.css";
 
 const Home = () => {
   return (
     <>
+          <NavBar/>
+
       <div className="background_image content_align">
         <section className="landing_page_content">
           <div className="intro_text">
